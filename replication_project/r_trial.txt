@@ -1,0 +1,275 @@
+
+R version 4.5.2 (2025-10-31) -- "[Not] Part in a Rumble"
+Copyright (C) 2025 The R Foundation for Statistical Computing
+Platform: aarch64-apple-darwin20
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[R.app GUI 1.82 (8556) aarch64-apple-darwin20]
+
+> data <- read.delim("nls.dat")
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") : cannot open file 'nls.dat': No such file or directory
+> help()
+starting httpd help server ... done
+> list.files
+function (path = ".", pattern = NULL, all.files = FALSE, full.names = FALSE, 
+    recursive = FALSE, ignore.case = FALSE, include.dirs = FALSE, 
+    no.. = FALSE) 
+.Internal(list.files(path, pattern, all.files, full.names, recursive, 
+    ignore.case, include.dirs, no..))
+<bytecode: 0x948dd2510>
+<environment: namespace:base>
+> getwd()
+[1] "/Users/chrisgee"
+> setwd("UCSD2526/")
+> getwd()
+[1] "/Users/chrisgee/UCSD2526"
+> data <- read.delim("nls.dat")
+> # Write the data frame to a new CSV file
+> write.csv(data, file = "output_file.csv", row.names = FALSE)
+> 
+> 
+> install.packages('tidyverse')
+--- Please select a CRAN mirror for use in this session ---
+also installing the dependencies ‘fastmap’, ‘sys’, ‘bit’, ‘ps’, ‘sass’, ‘digest’, ‘cachem’, ‘farver’, ‘labeling’, ‘RColorBrewer’, ‘viridisLite’, ‘rappdirs’, ‘rematch’, ‘askpass’, ‘base64enc’, ‘bit64’, ‘prettyunits’, ‘processx’, ‘evaluate’, ‘highr’, ‘xfun’, ‘yaml’, ‘bslib’, ‘fontawesome’, ‘htmltools’, ‘jquerylib’, ‘tinytex’, ‘backports’, ‘generics’, ‘glue’, ‘lifecycle’, ‘memoise’, ‘blob’, ‘DBI’, ‘R6’, ‘tidyselect’, ‘vctrs’, ‘withr’, ‘data.table’, ‘gtable’, ‘isoband’, ‘S7’, ‘scales’, ‘gargle’, ‘uuid’, ‘cellranger’, ‘curl’, ‘ids’, ‘rematch2’, ‘cpp11’, ‘pkgconfig’, ‘mime’, ‘openssl’, ‘timechange’, ‘utf8’, ‘systemfonts’, ‘textshaping’, ‘clipr’, ‘crayon’, ‘vroom’, ‘tzdb’, ‘progress’, ‘callr’, ‘fs’, ‘knitr’, ‘rmarkdown’, ‘selectr’, ‘stringi’, ‘broom’, ‘conflicted’, ‘cli’, ‘dbplyr’, ‘dplyr’, ‘dtplyr’, ‘forcats’, ‘ggplot2’, ‘googledrive’, ‘googlesheets4’, ‘haven’, ‘hms’, ‘httr’, ‘jsonlite’, ‘lubridate’, ‘magrittr’, ‘modelr’, ‘pillar’, ‘purrr’, ‘ragg’, ‘readr’, ‘readxl’, ‘reprex’, ‘rlang’, ‘rstudioapi’, ‘rvest’, ‘stringr’, ‘tibble’, ‘tidyr’, ‘xml2’
+
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/fastmap_1.2.0.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/sys_3.4.3.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/bit_4.6.0.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/ps_1.9.1.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/sass_0.4.10.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/digest_0.6.39.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/cachem_1.1.0.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/farver_2.1.2.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/labeling_0.4.3.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/RColorBrewer_1.1-3.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/viridisLite_0.4.3.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/rappdirs_0.3.4.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/rematch_2.0.0.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/askpass_1.2.1.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/base64enc_0.1-6.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/bit64_4.6.0-1.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/prettyunits_1.2.0.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/processx_3.8.6.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/evaluate_1.0.5.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/highr_0.11.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/xfun_0.56.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/yaml_2.3.12.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/bslib_0.10.0.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/fontawesome_0.5.3.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/htmltools_0.5.9.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/jquerylib_0.1.4.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/tinytex_0.58.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/backports_1.5.0.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/generics_0.1.4.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/glue_1.8.0.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/lifecycle_1.0.5.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/memoise_2.0.1.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/blob_1.3.0.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/DBI_1.2.3.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/R6_2.6.1.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/tidyselect_1.2.1.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/vctrs_0.7.1.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/withr_3.0.2.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/data.table_1.18.2.1.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/gtable_0.3.6.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/isoband_0.3.0.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/S7_0.2.1.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/scales_1.4.0.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/gargle_1.6.1.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/uuid_1.2-2.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/cellranger_1.1.0.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/curl_7.0.0.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/ids_1.0.1.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/rematch2_2.1.2.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/cpp11_0.5.3.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/pkgconfig_2.0.3.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/mime_0.13.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/openssl_2.3.4.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/timechange_0.4.0.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/utf8_1.2.6.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/systemfonts_1.3.1.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/textshaping_1.0.4.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/clipr_0.8.0.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/crayon_1.5.3.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/vroom_1.7.0.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/tzdb_0.5.0.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/progress_1.2.3.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/callr_3.7.6.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/fs_1.6.6.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/knitr_1.51.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/rmarkdown_2.30.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/selectr_0.5-1.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/stringi_1.8.7.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/broom_1.0.12.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/conflicted_1.2.0.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/cli_3.6.5.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/dbplyr_2.5.2.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/dplyr_1.2.0.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/dtplyr_1.3.3.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/forcats_1.0.1.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/ggplot2_4.0.2.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/googledrive_2.1.2.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/googlesheets4_1.1.2.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/haven_2.5.5.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/hms_1.1.4.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/httr_1.4.8.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/jsonlite_2.0.0.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/lubridate_1.9.5.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/magrittr_2.0.4.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/modelr_0.1.11.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/pillar_1.11.1.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/purrr_1.2.1.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/ragg_1.5.0.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/readr_2.1.6.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/readxl_1.4.5.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/reprex_2.1.1.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/rlang_1.1.7.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/rstudioapi_0.18.0.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/rvest_1.0.5.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/stringr_1.6.0.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/tibble_3.3.1.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/tidyr_1.3.2.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/xml2_1.5.2.tgz'
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/tidyverse_2.0.0.tgz'
+
+The downloaded binary packages are in
+	/var/folders/pp/7pkvb6_x3_l4wlmybptr9_q00000gn/T//RtmpCF41Qc/downloaded_packages
+> library(tidyverse)
+── Attaching core tidyverse packages ─────────────────────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.2.0     ✔ readr     2.1.6
+✔ forcats   1.0.1     ✔ stringr   1.6.0
+✔ ggplot2   4.0.2     ✔ tibble    3.3.1
+✔ lubridate 1.9.5     ✔ tidyr     1.3.2
+✔ purrr     1.2.1     
+── Conflicts ───────────────────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
+> column_positions <- nls_cols()
+Error in nls_cols() : could not find function "nls_cols"
+> column_positions <- nls_cols(
++ 
++ 
++ 
++ 
+> column_positions <- nls_cols( id = c(1,5), nearc2 = c(7,7), nearc4=c(10,10), nearc4a=c(12,13), nearc4b=c(15,16), ed76=c(18,19), ed66=c(21,22), age76=c(24,25), daded=c(27,31), nodaded=c(33,33), momed= c(35,39), nomomed= c(41,41), weight=c(43,54), momdad14 = c(56,56), sinmom14 = c(58,58), step14 = c(60,60), reg661 = c(62,62), reg662 = c(64,64), reg663 = c(66,66), reg664 = c(68,68), reg665 = c(70,70), reg666=c(72,72), reg667 = c(74,74), reg668 = c(76, 76), reg669 = c(78, 78), south66 = c(80,80), work76 = c(82,82), work78 = c(84, 84), lwage76 = c(86, 97), lwage78 = c(99,110), famed = c(112,112), black = c(114,114), smsa76r = c(116,116), smsa78r = c(118,118), reg76r = c(120, 120), reg78r= c(122,122), reg80r = c(124, 124), smsa664 = c(126, 126), wage76 = c(128, 132), wage78 = c(134, 138), wage80 = c(140, 144), noint78 = c(146, 146), noint80 = c(148, 148), enroll76 = c(150, 150), enroll78 = c(152, 152), enroll80 = c(154, 154), kww = c(156, 157), iq = c(159, 161), marsta76 = c(163, 163), marsta78 = c(165, 165), marsta80 = c(167,167), libcrd14 = c(169, 169))
+Error in nls_cols(id = c(1, 5), nearc2 = c(7, 7), nearc4 = c(10, 10),  : 
+  could not find function "nls_cols"
+> column_positions <- fwf_cols( id = c(1,5), nearc2 = c(7,7), nearc4=c(10,10), nearc4a=c(12,13), nearc4b=c(15,16), ed76=c(18,19), ed66=c(21,22), age76=c(24,25), daded=c(27,31), nodaded=c(33,33), momed= c(35,39), nomomed= c(41,41), weight=c(43,54), momdad14 = c(56,56), sinmom14 = c(58,58), step14 = c(60,60), reg661 = c(62,62), reg662 = c(64,64), reg663 = c(66,66), reg664 = c(68,68), reg665 = c(70,70), reg666=c(72,72), reg667 = c(74,74), reg668 = c(76, 76), reg669 = c(78, 78), south66 = c(80,80), work76 = c(82,82), work78 = c(84, 84), lwage76 = c(86, 97), lwage78 = c(99,110), famed = c(112,112), black = c(114,114), smsa76r = c(116,116), smsa78r = c(118,118), reg76r = c(120, 120), reg78r= c(122,122), reg80r = c(124, 124), smsa664 = c(126, 126), wage76 = c(128, 132), wage78 = c(134, 138), wage80 = c(140, 144), noint78 = c(146, 146), noint80 = c(148, 148), enroll76 = c(150, 150), enroll78 = c(152, 152), enroll80 = c(154, 154), kww = c(156, 157), iq = c(159, 161), marsta76 = c(163, 163), marsta78 = c(165, 165), marsta80 = c(167,167), libcrd14 = c(169, 169))
+> raw_data <- read_fwf(file = "nls.dat", col_positions = column_positions)
+Error:
+! 'nls.dat' does not exist in current working directory: '/Users/chrisgee/UCSD2526'.
+Run `rlang::last_trace()` to see where the error occurred.
+> raw_data <- read_fwf(file = "nls.dat", col_positions = column_positions)
+Rows: 3613 Columns: 52                                                                                                            
+── Column specification ───────────────────────────────────────────────────────────────────────
+
+chr (16): lwage76, lwage78, smsa78r, reg78r, reg80r, wage76, wage78, wage80, enroll78, enro...
+dbl (36): id, nearc2, nearc4, nearc4a, nearc4b, ed76, ed66, age76, daded, nodaded, momed, n...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+> head(raw_data)
+# A tibble: 6 × 52
+     id nearc2 nearc4 nearc4a nearc4b  ed76  ed66 age76 daded nodaded momed nomomed weight
+  <dbl>  <dbl>  <dbl>   <dbl>   <dbl> <dbl> <dbl> <dbl> <dbl>   <dbl> <dbl>   <dbl>  <dbl>
+1     2      0      0       0       0     7     5    29  9.94       1  10.2       1 158413
+2     3      0      0       0       0    12    11    27  8          0   8         0 380166
+3     4      0      0       0       0    12    12    34 14          0  12         0 367470
+4     5      1      1       1       0    11    11    27 11          0  12         0 380166
+5     6      1      1       1       0    12    12    34  8          0   7         0 367470
+6     7      1      1       1       0    12    11    26  9          0  12         0 380166
+# ℹ 39 more variables: momdad14 <dbl>, sinmom14 <dbl>, step14 <dbl>, reg661 <dbl>,
+#   reg662 <dbl>, reg663 <dbl>, reg664 <dbl>, reg665 <dbl>, reg666 <dbl>, reg667 <dbl>,
+#   reg668 <dbl>, reg669 <dbl>, south66 <dbl>, work76 <dbl>, work78 <dbl>, lwage76 <chr>,
+#   lwage78 <chr>, famed <dbl>, black <dbl>, smsa76r <dbl>, smsa78r <chr>, reg76r <dbl>,
+#   reg78r <chr>, reg80r <chr>, smsa664 <dbl>, wage76 <chr>, wage78 <chr>, wage80 <chr>,
+#   noint78 <dbl>, noint80 <dbl>, enroll76 <dbl>, enroll78 <chr>, enroll80 <chr>, kww <chr>,
+#   iq <chr>, marsta76 <chr>, marsta78 <chr>, marsta80 <chr>, libcrd14 <chr>
+> view(raw_data)
+Error in check_for_XQuartz(file.path(R.home("modules"), "R_de.so")) : 
+  X11 library is missing: install XQuartz from www.xquartz.org
+> glimpse(raw_data)
+Rows: 3,613
+Columns: 52
+$ id       <dbl> 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, …
+$ nearc2   <dbl> 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0…
+$ nearc4   <dbl> 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1…
+$ nearc4a  <dbl> 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1…
+$ nearc4b  <dbl> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0…
+$ ed76     <dbl> 7, 12, 12, 11, 12, 12, 18, 14, 12, 12, 9, 12, 11, 11, 16, 14, 11, 12, 14, 10…
+$ ed66     <dbl> 5, 11, 12, 11, 12, 11, 16, 13, 12, 12, 9, 10, 9, 9, 16, 8, 11, 12, 14, 9, 9,…
+$ age76    <dbl> 29, 27, 34, 27, 34, 26, 33, 29, 28, 29, 28, 26, 24, 30, 31, 24, 34, 34, 29, …
+$ daded    <dbl> 9.94, 8.00, 14.00, 11.00, 8.00, 9.00, 14.00, 14.00, 12.00, 12.00, 11.00, 11.…
+$ nodaded  <dbl> 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0…
+$ momed    <dbl> 10.25, 8.00, 12.00, 12.00, 7.00, 12.00, 14.00, 14.00, 12.00, 12.00, 12.00, 6…
+$ nomomed  <dbl> 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…
+$ weight   <dbl> 158413, 380166, 367470, 380166, 367470, 380166, 367470, 496635, 367772, 4804…
+$ momdad14 <dbl> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1…
+$ sinmom14 <dbl> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0…
+$ step14   <dbl> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…
+$ reg661   <dbl> 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1…
+$ reg662   <dbl> 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0…
+$ reg663   <dbl> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…
+$ reg664   <dbl> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…
+$ reg665   <dbl> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…
+$ reg666   <dbl> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…
+$ reg667   <dbl> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…
+$ reg668   <dbl> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…
+$ reg669   <dbl> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…
+$ south66  <dbl> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…
+$ work76   <dbl> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1…
+$ work78   <dbl> 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1…
+$ lwage76  <chr> "6.30627529", "6.17586727", "6.58063914", "5.52146092", "6.59167373", "6.214…
+$ lwage78  <chr> "6.07484616", ".", ".", ".", "6.54484979", "6.19351769", "6.46553598", "6.53…
+$ famed    <dbl> 9, 8, 2, 6, 8, 6, 1, 1, 3, 3, 6, 8, 8, 8, 9, 2, 6, 5, 4, 8, 9, 8, 2, 9, 6, 2…
+$ black    <dbl> 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…
+$ smsa76r  <dbl> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1…
+$ smsa78r  <chr> "1", "1", ".", ".", "1", "1", "1", "1", "1", "1", "1", "1", ".", "1", "1", "…
+$ reg76r   <dbl> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0…
+$ reg78r   <chr> "0", "0", ".", ".", "0", "0", "0", "0", "0", "0", "0", "0", ".", "0", "0", "…
+$ reg80r   <chr> "0", "0", ".", "0", ".", "0", "0", "0", "0", "0", "0", "0", ".", "0", "0", "…
+$ smsa664  <dbl> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1…
+$ wage76   <chr> "548", "481", "721", "250", "729", "500", "565", "608", "425", "515", "225",…
+$ wage78   <chr> "500", ".", ".", ".", "800", "563", "739", "789", "538", "600", "325", "425"…
+$ wage80   <chr> "755", "769", ".", ".", ".", "630", "808", "825", "650", "600", ".", "578", …
+$ noint78  <dbl> 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0…
+$ noint80  <dbl> 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0…
+$ enroll76 <dbl> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…
+$ enroll78 <chr> "0", "0", ".", ".", "0", "0", "0", "0", "0", "0", "0", "0", ".", "0", "0", "…
+$ enroll80 <chr> "0", "0", ".", "0", ".", "0", "0", "0", "0", "0", "0", "0", ".", "0", "0", "…
+$ kww      <chr> "15", "35", "42", "25", "34", "38", "41", "46", "32", "34", "29", "34", "22"…
+$ iq       <chr> ".", "93", "103", "88", "108", "85", "119", "108", "96", "97", "84", "89", "…
+$ marsta76 <chr> "1", "1", "1", "1", "1", "1", "1", "1", "4", "1", "1", "1", "1", "1", "1", "…
+$ marsta78 <chr> "1", "4", ".", ".", "1", "4", "1", "1", "4", "1", "1", "1", ".", "1", "1", "…
+$ marsta80 <chr> "1", "4", ".", "5", ".", "4", "1", "1", "4", "1", "1", "1", ".", "1", "1", "…
+$ libcrd14 <chr> "0", "1", "1", "1", "0", "1", "1", "1", "0", "1", "0", "1", "1", "0", "1", "…
+> clean_data <- raw_data %>% 
++ mutate(across(everything(), ~na_if(., -99)))
+Error in `mutate()`:
+ℹ In argument: `across(everything(), ~na_if(., -99))`.
+Caused by error in `across()`:
+! Can't compute column `lwage76`.
+Caused by error in `na_if()`:
+! Can't convert `y` <double> to match type of `x` <character>.
+Run `rlang::last_trace()` to see where the error occurred.
+> clean_data <- raw_data
+> write_csv(clean_data, "nls_cleaned.csv")
+                                                                                             
+> saveRDS(clean_data, "nls_cleaned.rds")
+> 
