@@ -1,0 +1,35 @@
+\documentclass[11pt]{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{enumitem}
+
+\title{Card \& Krueger Replication Project: Setup and Framing}
+\author{Christopher Gee}
+\date{July 2026}
+
+\begin{document}
+
+\maketitle
+
+\section*{Casual Question}
+
+How does employment change for firms that tend to follow trends in minimum wage employment?
+
+\section*{Treated and Control Group}
+
+The code 641 in the IND1990 CPS variable breakdown are individuals who worked at "Eating and drinking places."
+
+The treated group will be surveyed individuals who had a 641 IND1990 industry code in New Jersey. The control group will be surveyed individuals who had a 641 IND1990 industry code in Pennsylvania. 
+
+The observable treatment for the difference in differences estimation will be surveys conducted in New Jersey after the April 1992 period. The surveys captured in this period will capture people working in eating and drinking establishments who will receive an increase in wage as a result of the implemented state policy. 
+
+ \section*{Outcome}
+
+Using CPS/IPUMS data, we will observe how average employment changes before and after the minimum wage. A pre/post comparison of only the treated units can be misleading because we can not measure the effects of the post policy behavior without observing a group of individuals that would otherswise not have received a wage in minimum wage. 
+
+In our DiD estimate, for a causal effect to be present, we would see that the employment of workers at eating and drinking places would diverge if the minimum wage were to decrease employment of this population of workers. Removal of this treatment would reveal that average employment at eating and drinking places would be steady throughout the observation window. 
+
+
+\end{document}
