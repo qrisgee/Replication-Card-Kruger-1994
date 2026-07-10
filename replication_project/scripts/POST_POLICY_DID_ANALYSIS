@@ -1,0 +1,27 @@
+                            WLS Regression Results                            
+==============================================================================
+Dep. Variable:                EMPSTAT   R-squared:                       0.001
+Model:                            WLS   Adj. R-squared:                  0.001
+Method:                 Least Squares   F-statistic:                     13.49
+Date:                Thu, 09 Jul 2026   Prob (F-statistic):           8.51e-09
+Time:                        21:43:54   Log-Likelihood:                -11326.
+No. Observations:               33260   AIC:                         2.266e+04
+Df Residuals:                   33256   BIC:                         2.269e+04
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+=================================================================================
+                    coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------
+Intercept         0.8535      0.004    241.657      0.000       0.847       0.860
+NJ_PA             0.0318      0.006      5.399      0.000       0.020       0.043
+POLICY_PERIOD     0.0218      0.005      4.686      0.000       0.013       0.031
+DID_DUMMY        -0.0274      0.008     -3.553      0.000      -0.043      -0.012
+==============================================================================
+Omnibus:                    14320.136   Durbin-Watson:                   1.936
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):            47796.030
+Skew:                          -2.319   Prob(JB):                         0.00
+Kurtosis:                       6.603   Cond. No.                         6.93
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
