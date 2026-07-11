@@ -1,7 +1,7 @@
 ## Card & Krueger 1994 Replication Project
-This repository is a side project I conducted with advisory from the principle investigator of a economic dry lab I participated in during the Winter 2026 and Spring 2026 quarter
-The purpose of this project was to extend and develop transferable skills beyond the responsibilities I held as a research assistant
-The heart of this project was using IPUMS CPS microdata to replicate the 1994 Card-Krueger study that explored the effects of minimum wage raises in New Jersey during 1992.
+This repository is a side project I conducted with advisory from the principle investigator of a economic dry lab I participated in during the Winter 2026 and Spring 2026 quarter.
+The purpose of this project was to extend and develop transferable skills beyond the responsibilities I held as a research assistant.
+At the heart of this project, I was tasked to replicate the 1994 Card-Krueger study that explored the effects of minimum wage raises in New Jersey during 1992 using IPUMS CPS data.
 From my findings, I conducted a DiD estimate that yieded a result different from the original study produced in 1994.
 
 ## SCRIPTS 
