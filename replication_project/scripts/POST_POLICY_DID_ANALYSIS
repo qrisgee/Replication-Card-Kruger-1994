@@ -1,27 +1,28 @@
                             WLS Regression Results                            
 ==============================================================================
-Dep. Variable:                EMPSTAT   R-squared:                       0.001
-Model:                            WLS   Adj. R-squared:                  0.001
-Method:                 Least Squares   F-statistic:                     13.49
-Date:                Thu, 09 Jul 2026   Prob (F-statistic):           8.51e-09
-Time:                        21:43:54   Log-Likelihood:                -11326.
-No. Observations:               33260   AIC:                         2.266e+04
-Df Residuals:                   33256   BIC:                         2.269e+04
-Df Model:                           3                                         
-Covariance Type:            nonrobust                                         
-=================================================================================
-                    coef    std err          t      P>|t|      [0.025      0.975]
----------------------------------------------------------------------------------
-Intercept         0.8535      0.004    241.657      0.000       0.847       0.860
-NJ_PA             0.0318      0.006      5.399      0.000       0.020       0.043
-POLICY_PERIOD     0.0218      0.005      4.686      0.000       0.013       0.031
-DID_DUMMY        -0.0274      0.008     -3.553      0.000      -0.043      -0.012
+Dep. Variable:                EMPSTAT   R-squared:                       0.002
+Model:                            WLS   Adj. R-squared:                  0.002
+Method:                 Least Squares   F-statistic:                     17.74
+Date:                Mon, 20 Jul 2026   Prob (F-statistic):           1.49e-14
+Time:                        21:26:07   Log-Likelihood:                -4766.7
+No. Observations:               31609   AIC:                             9543.
+Df Residuals:                   31604   BIC:                             9585.
+Df Model:                           4                                         
+Covariance Type:                  HC1                                         
+====================================================================================
+                       coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------------
+Intercept            0.9046      0.005    173.854      0.000       0.894       0.915
+NJ_PA                0.0182      0.004      4.047      0.000       0.009       0.027
+POLICY_PERIOD        0.0059      0.006      0.987      0.324      -0.006       0.018
+DID_DUMMY           -0.0196      0.006     -3.053      0.002      -0.032      -0.007
+RECESSION_PERIOD     0.0209      0.005      3.840      0.000       0.010       0.032
 ==============================================================================
-Omnibus:                    14320.136   Durbin-Watson:                   1.936
-Prob(Omnibus):                  0.000   Jarque-Bera (JB):            47796.030
-Skew:                          -2.319   Prob(JB):                         0.00
-Kurtosis:                       6.603   Cond. No.                         6.93
+Omnibus:                    20060.973   Durbin-Watson:                   1.962
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):           148845.468
+Skew:                          -3.184   Prob(JB):                         0.00
+Kurtosis:                      11.513   Cond. No.                         7.82
 ==============================================================================
 
 Notes:
-[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[1] Standard Errors are heteroscedasticity robust (HC1)
