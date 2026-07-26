@@ -1,0 +1,75 @@
+\documentclass[11pt]{article}
+\usepackage{graphicx}
+\usepackage[margin=0.75in, top=0.1in]{geometry}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{titlesec}
+\usepackage{threeparttable}
+\usepackage{titlesec}
+\usepackage{titling}
+
+
+\titlespacing*{\section}{0pt}{6pt}{2pt}
+\setlength{\droptitle}{-25pt}
+\pretitle{\begin{center}\large\bfseries}
+\posttitle{\end{center}\vspace{-10pt}}
+\preauthor{\begin{center}\large}
+\postauthor{\end{center}\vspace{-30pt}}
+ 
+\title{Card \& Krueger Replication Project: Conclusions \& Summary}
+\author{Christopher Gee \quad$\vert$\quad July 2026}
+\date{}
+
+\begin{document}
+\maketitle
+\small
+
+The goal of this project is to see if the results in the Card \& Krueger 1994 study were replicable with a different set of data. In this project, I sourced consumer population surveys (CPS) ranging between 1988-1997 from the Integrated Public Use Microdata Series (IPUMS). To ensure I was following the structure of the 1994 study, I abstracted the Annual Social and Economic Supplements and narrowed my observable population to groups of individuals surveyed under the code 641 (i.e. working at ``eating and drinking places") in the industry 1990 basis (IND1990).
+
+\begin{figure}[htbp]
+    \vspace{-4pt}
+    \centering
+    \includegraphics[width=0.62\textwidth]{[FINAL]_CPS_641_STATE_BY_MOTNH.png}
+    \vspace{-4pt}
+    \caption{1988--1997: State $\times$ Month Average Employment}
+    \vspace{-4pt}
+\end{figure}
+
+The original publication concluded that employment trends between observed groups did not differ after being ``treated." From figure 1. alone, there is an observable difference in the magnitude of month to month reversals in New Jersey's trend line relative to Pennsylvania. With the larger and more generalized survey sample from the CPS survey, I turned these observations into statistically concrete conclusions that differed from the original paper. The difference-in-difference construction and results are as follows:
+
+\[
+Y_{it} = \alpha + \beta \text{Treated}_i + \gamma \text{Post}_t
++ \delta (\text{Treated}_i \times \text{Post}_t) + \nu \text{Recession}_t + \varepsilon_{it}.
+\]
+
+\begin{table}[htbp]
+  \centering
+  \small % compact
+  \setlength{\tabcolsep}{8pt} % Adjusts space between columns
+  \begin{tabular}{l r r r r}
+    \toprule
+    \textbf{Variable} & \textbf{Coef.} & \textbf{Std. Err.} & \textbf{\textit{Z score}} & \textbf{\textit{P-Value}}\\
+    \midrule
+    Intercept & 0.9046 & 0.005 &  173.854 & 0.000 \\
+    $\beta$ (New Jersey = 1; Pennsylvania = 0) &  0.0182 & 0.004 &    4.047 & 0.000 \\
+    $\gamma$ (Post-policy = 1; Pre-policy = 0) &  0.0059 & 0.006 & 0.987 & 0.324 \\
+    $\delta$ ($\beta$ x $\gamma$) & -0.0196 & 0.006 &   -3.053 & 0.002 \\
+    $\nu$ (Recession window = 1; Otherwise = 0) &  0.0209 & 0.005 & 3.840 & 0.000 \\
+    \bottomrule
+  \end{tabular}
+  \begin{tablenotes}
+  \footnotesize
+  \item \textit{Notes:} Dependent variable ($Y_{it}$) is EMPSTAT (1 = employed). Estimated using weighted least squares, weighted by the CPS final person weight (WTFINL). Standard errors are heteroskedasticity-consistent (HC1).
+  \end{tablenotes}
+\end{table}
+
+Testing $H_0: \delta = 0, H_1:  \delta \neq 0$, we reject the null hypothesis, at a significance level of 5\% concluding that employment in fast food industries differed between the observed groups in our data set. Our treated group (New Jersey, following the wage increase in April 1992) saw a differential decline in employment at ``eating and drinking places" of approximately 2 percentage points. A similar hypothesis test on $\gamma$ ($p= 0.324$) indicates the changes in average employment from the pre- to post-policy period are not statistically significant. Reinforcing the interpretation of $\delta$ and indicating changes in employment across NJ and PA do not share a time trend surrounding a period shift, but rather a policy specific effect.
+
+As a bonus, a joint Wald test performed under the following hypothesis: $ H_{0}: \delta = \nu = 0\ \ \ H_{1}: not\ both\ zero$ produced $\chi^2(2) = 24.41$ and $p < 0.001$. Rejecting the null hypothesis that both coefficients are zero, this test confirms that we should not drop these terms from the model. 
+
+The results of the CPS data clearly show dissimilar conclusions. But compared to the original paper, there is a large difference in research design. Card \& Krueger drew their conclusions using actual head counts and full-time employment measurements of the same restaurants they surveyed right before the minimum wage increase was implemented and 8 months after. This contrasts my method of using state-wide month-to-month employment data across a 9 year window. Card \& Krueger also narrowed their survey population to restaurants located close to the border between the two states. Nonetheless, this replication project using CPS microdata reveals that, relative to Pennsylvania, New Jersey had a statistically significant decline in employment after the state minimum wage was increased on April, 1992. 
+ 
+\end{document}
